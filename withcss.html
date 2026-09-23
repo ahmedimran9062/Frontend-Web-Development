@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0px;
+        box-sizing: border-box;
+        background-color: beige;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family:
+          "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      }
+      .header {
+        background-color: #1a2530;
+        text-align: center;
+        border: 1px solid black;
+        width: 100%;
+        color: white;
+      }
+      .back {
+        border: 1px solid black;
+        padding: 20px;
+        background-color: lightgray;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        border-radius: 8px;
+        box-shadow: 0 3px 15px black;
+      }
+      .category1 {
+        border: 1px dotted black;
+        background-color: #e5e0d8;
+      }
+      .category1:hover {
+        background-color: beige;
+        .contactd {
+          background-color: #1a2530;
+          border-radius: 4px;
+          color: white;
+          font-weight: lighter;
+          .req {
+            color: yellow;
+          }
+        }
+      }
+      .contactd {
+        font-weight: bold;
+        padding: 0 5px;
+      }
+      .button-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .btn {
+        font-size: 20px;
+        background-color: beige;
+        padding: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
+
+        border: 1px solid black;
+        border-radius: 10px;
+        font-family:
+          "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      }
+      .btn:hover {
+        background-color: rgb(243, 243, 203);
+      }
+      .btn:active {
+        background-color: #1a2530;
+        color: white;
+      }
+      .req {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Travel Reservation Form</h1>
+    </div>
+
+    <div class="back">
+      <form>
+        <fieldset class="category1">
+          <legend class="contactd">Contact Details:</legend>
+          <label for="uname">Full Name:</label>
+          <input
+            type="text"
+            id="uname"
+            name="uname"
+            placeholder="First and last name"
+          />
+          <br />
+          <br />
+          <label for="uemail">Email Address:</label>
+          <input
+            type="email"
+            name="useremail"
+            id="uemail"
+            placeholder="Enter your Email"
+          />
+        </fieldset>
+        <br />
+        <fieldset class="category1">
+          <legend class="contactd">Tour Details</legend>
+          <label for="tpackage">Select Tour Package:</label>
+          <select name="package" id="tpackage">
+            <option value="">Select your preferred package</option>
+            <option value="solo">Basic accomodations</option>
+            <option value="duo">Premium accomodations</option>
+            <option value="deluxe">Luxury accomodations</option>
+          </select>
+          <br />
+          <br />
+          <label for="adate">Ariival Date:</label>
+          <input type="date" name="date" id="adate" />
+          <br />
+          <br />
+          <label for="nperson">Number of Persom:</label>
+          <input
+            type="number"
+            id="nperson"
+            name="nperson"
+            max="5"
+            placeholder="(Max 5)"
+          />
+        </fieldset>
+        <br />
+        <fieldset class="category1">
+          <legend class="contactd">
+            Package Extras <span class="req">*</span>
+          </legend>
+          <span>What would you want to avail?</span>
+          <br />
+          <br />
+          <input
+            type="checkbox"
+            name="avail_option"
+            id="board"
+            value="Boarding"
+          />
+          <label for="board">Boarding</label>
+          <br />
+          <input
+            type="checkbox"
+            name="avail_option"
+            id="food"
+            value="fooding"
+          />
+          <label for="food">Fooding</label>
+          <br />
+          <input
+            type="checkbox"
+            name="avail_option"
+            id="sight"
+            value="sighting"
+          />
+          <label for="sight">Sight Seeing</label>
+        </fieldset>
+
+        <br />
+
+        <fieldset class="category1">
+          <legend class="contactd">Coupom and Terms</legend>
+          <label for="discount">Discount coupon code:</label>
+          <input
+            type="text"
+            id="discount"
+            name="dcoupon"
+            placeholder="Enter your Coupom"
+          />
+          <br />
+          <br />
+          <span>Terms and conditions</span>
+          <input type="radio" id="terms" value="yes" name="terms" readonly />
+          <label for="terms">I Agree</label>
+          <span></span>
+          <input type="radio" id="termsno" value="no" name="terms" required />
+          <label for="termsno">I Disgree</label>
+        </fieldset>
+
+        <br />
+        <div class="button-box">
+          <button type="submit" class="btn">Complete Registraition</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
