@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment-2</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <div class="heading">
+        <h1>Application Form</h1>
+      </div>
+      <div class="capt">
+        <caption>
+          Fields marked with
+          <span class="req">*</span>
+          are required.
+        </caption>
+      </div>
+
+      <div class="form">
+        <form action="">
+          <fieldset class="category">
+            <legend class="category-text">A: General Information</legend>
+            <div class="category-inner">
+              <div class="boxleft">
+                <label for="name"
+                  >Proposed Insured's Full Name
+                  <span class="req">*</span></label
+                >
+                <br />
+                <input type="text" id="name" name="name" required />
+                <br />
+              </div>
+              <div class="boxright">
+                <label for="date">Birth Date <span class="req">*</span></label>
+                <br />
+                <input type="date" id="date" name="b_date" required />
+                <br />
+              </div>
+            </div>
+            <div class="genderbox">
+              <label class="genderlabel">Gender:</label>
+              <small class="invisible">**</small>
+              <input type="radio" id="male" name="gender" value="male" />
+              <label for="male">Male</label>
+              <small class="invisible">***</small>
+              <input type="radio" id="female" name="gender" value="female" />
+              <label for="female">Female</label>
+              <br />
+            </div>
+            <div class="addressbox">
+              <label for="address">Address <span class="req">*</span></label>
+              <br />
+              <textarea name="address" id="address" required></textarea>
+              <br />
+            </div>
+            <div class="category-inner">
+              <div class="boxleft">
+                <label for="num">Phone Number <span class="req">*</span></label>
+                <br />
+                <input
+                  type="tel"
+                  name="phome-number"
+                  id="num"
+                  required
+                  placeholder="+92 300 1234567"
+                />
+              </div>
+              <div class="boxright">
+                <label for="email"
+                  >Email Address <span class="req">*</span></label
+                >
+                <br />
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="name@example.com"
+                />
+                <br />
+              </div>
+            </div>
+            <div class="category-inner">
+              <div class="boxleft">
+                <label for="cnic"
+                  >ID / CNIC Number <span class="req">*</span></label
+                >
+                <br />
+                <input
+                  type="tel"
+                  id="cnic"
+                  name="identification-num"
+                  required
+                  placeholder="42101-1234567-1"
+                />
+              </div>
+              <div class="boxright">
+                <label for="ssn">Social Security / Reference Number</label>
+                <br />
+                <input type="tel" id="ssn" name="ssn-ref" />
+              </div>
+            </div>
+            <div class="category-inner">
+              <div class="boxleft">
+                <label for="marital"
+                  >Marital Status <span class="req">*</span></label
+                >
+                <br />
+                <select name="marital-status" id="marital" class="marital">
+                  <option value="" disabled selected hidden>
+                    Select Status
+                  </option>
+                  <option value="unmarried">Single / Unmarried</option>
+                  <option value="Married">Married</option>
+                  <option value="Divorced">Divorced</option>
+                  <option value="Widowed">Widowed</option>
+                </select>
+              </div>
+              <div class="boxright">
+                <label for="job">Occupation <span class="req">*</span></label>
+                <br />
+                <input type="text" id="job" name="Occupation" required />
+              </div>
+            </div>
+            <div class="genderbox">
+              <label>Are you Retired? <span class="req">*</span></label>
+              <small class="invisible">**</small>
+              <input
+                type="radio"
+                id="yes"
+                value="yes"
+                name="retired"
+                required
+              />
+              <label for="yes">Yes</label>
+              <small class="invisible">***</small>
+              <input type="radio" id="no" value="no" name="retired" required />
+              <label for="no">No</label>
+              <br />
+            </div>
+          </fieldset>
+          <fieldset class="category">
+            <legend class="category-text">B: Tyoe of Health Coverage</legend>
+            <div>
+              <fieldset class="sub-category">
+                <legend class="sub-category-text">Employee Coverage</legend>
+                <div class="sub-box">
+                  <input
+                    type="radio"
+                    id="employeeyes"
+                    name="health-coverage-employee"
+                    value="yes"
+                  />
+                  <label for="employeeyes">Yes</label>
+                  <small class="invisible">**</small>
+                  <input
+                    type="radio"
+                    name="health-coverage-employee"
+                    id="employeeno"
+                    value="no"
+                  />
+                  <label for="employeeno">No</label>
+                </div>
+                <div class="optionbox2">
+                  <label for="planchoice">Employee Plan Choice</label>
+                  <br />
+                  <select name="employeeplan" id="planchoice" class="select-2">
+                    <option value="" selected disabled hidden>
+                      Select plan
+                    </option>
+                    <option value="plan1">Plan 1</option>
+                    <option value="plan2">Plan 2</option>
+                    <option value="plan3">Plan 3</option>
+                  </select>
+                </div>
+              </fieldset>
+              <fieldset class="sub-category">
+                <legend class="sub-category-text">Spouse Coverage</legend>
+                <div class="sub-box">
+                  <input
+                    type="radio"
+                    id="spouseyes"
+                    name="health-coverage-spouse"
+                    value="yes"
+                  />
+                  <label for="spouseyes">Yes</label>
+                  <small class="invisible">**</small>
+                  <input
+                    type="radio"
+                    name="health-coverage-spouse"
+                    id="spouseno"
+                    value="no"
+                  />
+                  <label for="spouseno">No</label>
+                </div>
+                <div class="optionbox2">
+                  <label for="splanchoice">Spouse Plan Choice</label>
+                  <br />
+                  <select name="spouseplan" id="splanchoice" class="select-2">
+                    <option value="" selected disabled hidden>
+                      Select plan
+                    </option>
+                    <option value="plan1">Plan 1</option>
+                    <option value="plan2">Plan 2</option>
+                    <option value="plan3">Plan 3</option>
+                  </select>
+                </div>
+              </fieldset>
+              <fieldset class="sub-category">
+                <legend class="sub-category-text">Children Coverage</legend>
+                <div class="sub-box">
+                  <input
+                    type="radio"
+                    id="childrenyes"
+                    name="health-coverage-children"
+                    value="yes"
+                  />
+                  <label for="childrenyes">Yes</label>
+                  <small class="invisible">**</small>
+                  <input
+                    type="radio"
+                    name="health-coverage-children"
+                    id="childrenno"
+                    value="no"
+                  />
+                  <label for="childrenno">No</label>
+                </div>
+                <div class="optionbox2">
+                  <label for="cplanchoice">Children Plan Choice</label>
+                  <br />
+                  <select name="childrenplan" id="cplanchoice" class="select-2">
+                    <option value="" selected disabled hidden>
+                      Select plan
+                    </option>
+                    <option value="plan1">Plan 1</option>
+                    <option value="plan2">Plan 2</option>
+                    <option value="plan3">Plan 3</option>
+                  </select>
+                </div>
+              </fieldset>
+            </div>
+          </fieldset>
+          <fieldset class="category">
+            <legend class="category-text">
+              C: Spouse / Children Information
+            </legend>
+            <div class="category-inner">
+              <div class="boxleft">
+                <label for="depe">Dependant Name </label>
+                <br />
+                <input type="text" id="depe" name="Dependant-name" />
+              </div>
+              <div class="boxright">
+                <label for="ssn2">ID / SSN</label>
+                <br />
+                <input type="tel" id="ssn2" name="ssn-id" />
+              </div>
+            </div>
+            <div class="category-inner">
+              <div class="boxleft">
+                <label for="rele">Relationship</label>
+                <br />
+                <select name="spouse-children-rel" id="rele" class="marital">
+                  <option value="" disabled selected hidden>
+                    Select Relationship
+                  </option>
+                  <option value="wife">Wife</option>
+                  <option value="Husband">Husband</option>
+                  <option value="Som">Son</option>
+                  <option value="Daughter">Daughter</option>
+                </select>
+              </div>
+              <div class="boxright">
+                <label for="date2">Birth Date</label>
+                <br />
+                <input type="date" id="date2" name="birth-date" />
+              </div>
+            </div>
+            <div class="category-inner">
+              <div class="boxleft">
+                <label for="spouse-children-age">Age</label>
+                <br />
+                <input
+                  type="number"
+                  id="spouse-children-age"
+                  name="spouse-children-age"
+                />
+              </div>
+              <div class="boxright">
+                <label for="cgender">Gender</label>
+                <br />
+                <select
+                  name="spouse-children-gender"
+                  id="cgender"
+                  class="marital"
+                >
+                  <option value="" hidden selected disabled>
+                    Select Gender
+                  </option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="category">
+            <legend class="category-text">D: Policy Imformation</legend>
+            <div class="category-inner">
+              <div class="boxleft">
+                <label for="unit">Units</label>
+                <br />
+                <input type="number" id="unit" name="policy-unit" />
+              </div>
+              <div class="boxright">
+                <label for="apremium">Annual Premium</label>
+                <br />
+                <input type="text" id="apremium" name="annual-premium" />
+              </div>
+            </div>
+            <div class="category-inner">
+              <div class="boxmiddle">
+                <label for="pay">Payment Mode <span class="req">*</span></label>
+                <br />
+                <select name="Payment-mode" id="pay" required class="select-3">
+                  <option value="" selected disabled hidden>
+                    Select Payment Mode
+                  </option>
+                  <option value="Credit">Credit Card</option>
+                  <option value="debit">Debit Card</option>
+                </select>
+              </div>
+            </div>
+            <div class="category-inner">
+              <div class="boxleft">
+                <label for="cap">Cash with Application</label>
+                <br />
+                <input type="text" name="Cash-with-application" id="cap" />
+              </div>
+              <div class="boxright">
+                <label for="pap">Planned Monthly Premium</label>
+                <br />
+                <input type="text" name="planned-monthly-premium" id="pap" />
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="category">
+            <legend class="category-text">E: Required Document</legend>
+            <div>
+              Please attach your supporting document before submitting the
+              application.
+            </div>
+            <br />
+
+            <div class="boxmiddle">
+              <label for="doc" class="doclabel"
+                >Attach Document <span class="req">*</span></label
+              >
+              <br />
+              <input
+                type="file"
+                name="required-document"
+                id="doc"
+                required
+                class="doc-input"
+                accept=".PDF, .JPEG, .PNG"
+              />
+              <br />
+              <div class="format">Accepted formats: PDF, JPG, JPEG and PNG</div>
+            </div>
+          </fieldset>
+          <fieldset class="category">
+            <legend class="category-text">F: Decleration</legend>
+            <div class="decbox">
+              <input type="radio" name="Decleration" id="dec" value="confirm" />
+              <span class="invisible">*</span>
+              <label for="dec">
+                I confirm that the information provided in this application is
+                complete and accurate.</label
+              >
+            </div>
+            <div class="category-inner">
+              <div class="boxleft">
+                <label for="sign"
+                  >Applicant Full Name / Signature
+                  <span class="req">*</span></label
+                >
+                <br />
+                <input type="text" name="Decleration-sign" id="sign" required />
+              </div>
+              <div class="boxright">
+                <label for="apdate"
+                  >Application Date <span class="req">*</span></label
+                >
+                <br />
+                <input type="date" name="application-date" id="apdate" />
+              </div>
+            </div>
+          </fieldset>
+          <div class="boxbutton">
+            <button type="reset" class="reset-button">Clear Form</button>
+            <button type="submit" class="submit-button">
+              Submit Application
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
