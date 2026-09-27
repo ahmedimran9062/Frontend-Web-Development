@@ -1,0 +1,74 @@
+body {
+  height: 300vh;
+}
+#navbar {
+  background-color: lightblue;
+  overflow: auto;
+}
+.logo {
+  float: left;
+  font-size: 50px;
+  margin: 10px;
+}
+.link-list {
+  float: right;
+  font-size: 30px;
+  list-style: none;
+}
+.link-list li {
+  float: left;
+  padding: 10px 20px;
+}
+li a {
+  text-decoration: none;
+  color: white;
+}
+.heading-parent {
+  position: relative;
+  background-color: lightslategray;
+  height: 500px;
+  box-sizing: border-box;
+  padding-top: 20px;
+}
+.heading {
+  font-size: 50px;
+  position: sticky;
+  top: 0;
+  text-align: center;
+}
+.parent {
+  box-sizing: border-box;
+  width: 700px;
+  height: 700px;
+  background-color: lightseagreen;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.child {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
+.child:nth-child(4) {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.child:nth-child(odd) {
+  background-color: yellow;
+}
+.child:nth-child(even) {
+  background-color: green;
+}
+.child:nth-child(2) {
+  position: sticky;
+  top: 0;
+  margin-left: 25%;
+}
+.child:nth-child(3) {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
