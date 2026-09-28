@@ -199,6 +199,7 @@ input {
   border: none;
   background-color: #3e6f91;
   padding: 10px;
+  color: white; 
 }
 .decbox {
   display: flex;
