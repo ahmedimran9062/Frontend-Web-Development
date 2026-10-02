@@ -1,0 +1,193 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #fff8f0;
+  padding: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logo img {
+  border-radius: 50%;
+  border: 1px solid #340007;
+  max-width: 110px;
+  min-width: 100px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.link-container {
+  display: flex;
+  gap: 40px;
+  margin: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 70%;
+  border: 1px solid #340007;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: #ffdee5;
+  box-shadow: 0 8px 16px rgba(52, 0, 7, 0.12);
+}
+.active {
+  border: 1px solid #340007;
+  background-color: #d9a066;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-weight: bold;
+  border-radius: 18px;
+}
+.link a {
+  text-decoration: none;
+  font-size: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #340007;
+  font-weight: bold;
+  font-family: "Playfair";
+}
+.home-comtainer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin-top: auto;
+  padding: 30px;
+  background-color: #fff8f0;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 20px;
+  column-gap: 15px;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main-text {
+  font-size: clamp(50px, 5vw + 16px, 100px);
+  font-family: "Playfair";
+  color: #340007;
+}
+.sub-text {
+  font-size: clamp(16px, 5vw + 8px, 40px);
+  color: #79253e;
+}
+.image {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.cookie1 {
+  flex-grow: 1;
+  width: 90px;
+  border-radius: 40px;
+  border: 2px solid #d9a066;
+  box-shadow: 0 8px 16px rgba(52, 0, 7, 0.12);
+}
+
+.btn {
+  width: 200px;
+  height: 75px;
+  margin-top: 20px;
+  background-color: #e07b94;
+  border-radius: 40px;
+  border: 1px solid #340007;
+  text-align: center;
+}
+.btn:hover {
+  background-color: #d9a066;
+}
+.btn a {
+  font-size: 23px;
+  text-decoration: none;
+  color: #340007;
+  font-weight: bold;
+}
+.menu-container {
+  display: flex;
+  justify-content: center;
+}
+.card {
+  background-color: #fffaf5;
+  max-width: 1300px;
+  width: 100%;
+  min-width: 375px;
+  border: 1px solid #d9a066;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(52, 0, 7, 0.08);
+}
+.category {
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  row-gap: 20px;
+}
+.cookie-heading {
+  color: #340007;
+  font-size: 50px;
+  margin-bottom: 30px;
+  text-align: center;
+  flex-basis: 100%;
+  height: auto;
+  font-family: "Playfair";
+  text-decoration: underline solid 3px #d9a066;
+  text-underline-offset: 5px;
+}
+.menu-item-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 400px;
+  min-width: 300px;
+  width: 100%;
+  height: 150px;
+  background-color: #ffdee5;
+  border-radius: 15px;
+  border-left: 4px solid #e07b94;
+}
+.label-price-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-grow: 1;
+  padding: 10px;
+}
+.image-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border: 3px solid #d9a066;
+  border-radius: 20px;
+}
+.cookie-image {
+  width: 150px;
+  height: auto;
+  display: block;
+}
+.label {
+  font-size: 32px;
+  color: #340007;
+  font-weight: bold;
+}
+.price {
+  font-size: 22px;
+  color: #79253e;
+  font-family: "Playfair";
+}
