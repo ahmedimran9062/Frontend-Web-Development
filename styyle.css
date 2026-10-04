@@ -1,0 +1,233 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.grid-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 20fr 40fr 40fr;
+  grid-template-rows: 20fr 30fr 30fr 40fr;
+  grid-template-areas:
+    "header header header"
+    "sidebar content1 content1"
+    "sidebar content2 content3"
+    "footer footer footer";
+  gap: 10px;
+  height: 100vh;
+  margin-bottom: 200px;
+  background-color: navy;
+  padding: 10px;
+}
+.child {
+  border: 1px solid black;
+}
+.header {
+  grid-area: header;
+  background-color: red;
+}
+.sidebar {
+  grid-area: sidebar;
+  background-color: burlywood;
+}
+.content1 {
+  grid-area: content1;
+  background-color: grey;
+}
+.content2 {
+  grid-area: content2;
+  background-color: lightgreen;
+}
+
+.content3 {
+  grid-area: content3;
+  background-color: lightsalmon;
+}
+.footer {
+  background-color: lightgoldenrodyellow;
+  grid-area: footer;
+}
+.grid-container2 {
+  display: grid;
+  grid-template-rows: repeat(3, 300fr);
+  grid-template-columns: repeat(4, 400fr);
+  gap: 10px;
+  background-color: navy;
+  justify-content: space-evenly;
+  margin-bottom: 300px;
+  padding: 10px;
+  width: 100%;
+  height: 150vh;
+}
+.child2 {
+  border: 1px solid black;
+}
+.child2:first-child {
+  background-color: green;
+  grid-column: 1;
+  grid-row: 1 / span 3;
+}
+.child2:nth-child(2) {
+  background-color: green;
+  grid-column: 2 / span 2;
+  grid-row: 1;
+}
+.child2:nth-child(3) {
+  background-color: red;
+  grid-column: 4;
+  grid-row: 1;
+}
+.child2:nth-child(4) {
+  background-color: orange;
+  grid-column: 2;
+  grid-row: 2;
+}
+.child2:nth-child(5) {
+  background-color: red;
+  grid-column: 3;
+  grid-row: 2;
+}
+.child2:nth-child(6) {
+  background-color: green;
+  grid-column: 4;
+  grid-row: 2 / span 2;
+}
+.child2:nth-child(7) {
+  background-color: red;
+  grid-column: 2;
+  grid-row: 3;
+}
+.child2:nth-child(8) {
+  background-color: orange;
+  grid-column: 3;
+  grid-row: 3;
+}
+.grid3 {
+  display: grid;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
+  height: 150vh;
+  grid-template-rows: 25fr 25fr 15fr 35fr;
+  grid-template-columns: 22.5fr 22.5fr 10fr 22.5fr 22.5fr;
+  grid-template-areas:
+    "rad blue1 blue1 bron bron"
+    "rad bron2 vite vite rad3"
+    "vite2 bron2 vite vite rad3"
+    "vite2 rad2 rad2 blue2 rad3";
+  background-color: rgb(29, 28, 29);
+  gap: 10px;
+  margin-bottom: 400px;
+}
+.box1 {
+  grid-area: rad;
+  background-color: red;
+}
+.box2 {
+  grid-area: blue1;
+  background-color: lightblue;
+}
+.box3 {
+  grid-area: bron;
+  background-color: burlywood;
+}
+.box4 {
+  grid-area: bron2;
+  background-color: burlywood;
+}
+.box5 {
+  grid-area: vite;
+  background-color: white;
+}
+.box6 {
+  grid-area: rad3;
+  background-color: red;
+}
+.box7 {
+  grid-area: vite2;
+  background-color: white;
+}
+.box8 {
+  grid-area: rad2;
+  background-color: red;
+}
+.box9 {
+  grid-area: blue2;
+  background-color: lightblue;
+}
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.boxes {
+  border-radius: 40px;
+  overflow: hidden;
+}
+.grid4 {
+  display: grid;
+  width: 100%;
+  height: 150vh;
+  grid-template-columns: 30fr 70fr;
+  grid-template-rows: 10fr 75fr 15fr;
+  grid-template-areas:
+    "header header"
+    "aside article"
+    "footer footer";
+  gap: 20px;
+  padding: 20px;
+  background-color: burlywood;
+  font-size: 30px;
+}
+header {
+  grid-area: header;
+  background-color: lightgreen;
+  align-content: center;
+  text-align: center;
+}
+aside {
+  grid-area: aside;
+  background-color: aqua;
+  align-content: center;
+  text-align: center;
+}
+article {
+  grid-area: article;
+  background-color: yellowgreen;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    ". . ."
+    ". articletext ."
+    "box1 box2 box3";
+  padding: 10px;
+  gap: 10px;
+}
+.article-text {
+  grid-area: articletext;
+  align-content: center;
+  text-align: center;
+}
+
+.image-grid1 {
+  grid-area: box1;
+  background-color: white;
+}
+.image-grid2 {
+  grid-area: box3;
+  background-color: white;
+}
+.image-grid3 {
+  grid-area: box2;
+  background-color: white;
+}
+footer {
+  grid-area: footer;
+  background-color: coral;
+  align-content: center;
+  text-align: center;
+}
