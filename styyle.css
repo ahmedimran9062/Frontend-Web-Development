@@ -216,14 +216,20 @@ article {
 .image-grid1 {
   grid-area: box1;
   background-color: white;
+  align-content: center;
+  text-align: center;
 }
 .image-grid2 {
   grid-area: box3;
   background-color: white;
+  align-content: center;
+  text-align: center;
 }
 .image-grid3 {
   grid-area: box2;
   background-color: white;
+  align-content: center;
+  text-align: center;
 }
 footer {
   grid-area: footer;
