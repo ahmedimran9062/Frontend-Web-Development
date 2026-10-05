@@ -48,6 +48,9 @@ body {
   font-weight: bold;
   border-radius: 18px;
 }
+.link {
+  transition: all 0.2s ease;
+}
 .link a {
   text-decoration: none;
   font-size: 30px;
@@ -56,6 +59,13 @@ body {
   color: #340007;
   font-weight: bold;
   font-family: "Playfair";
+  text-shadow: 0px 2px 4px rgba(59, 9, 16, 0.151);
+}
+.link:hover {
+  transform: translateY(-2px);
+  a {
+    text-shadow: 0px 2px 6px rgba(59, 9, 16, 0.151);
+  }
 }
 .home-comtainer {
   display: flex;
@@ -162,12 +172,18 @@ body {
   width: 100%;
   height: 150px;
   background-color: #ffdee5;
-  border-radius: 15px;
+  border-radius: 20px;
   border-left: 4px solid #e07b94;
   box-shadow: 0 8px 16px rgba(52, 0, 7, 0.11);
   transition: all 0.3s ease;
 }
-@media (max-width: 895px) {
+@media (max-width: 1285px) {
+  .menu-item-container {
+    max-width: calc(50% - 20px);
+    flex-grow: 1;
+  }
+}
+@media (max-width: 840px) {
   .menu-item-container {
     max-width: 100%;
     flex-grow: 1;
