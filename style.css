@@ -1,0 +1,264 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "navbar"
+    "main";
+}
+.navbar {
+  height: auto;
+  display: flex;
+  grid-area: navbar;
+  background-color: black;
+  margin-bottom: 10px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.logo-img {
+  width: 100px;
+  display: block;
+  border-radius: 30px;
+}
+.link-list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-around;
+  padding-right: 2rem;
+  column-gap: 5rem;
+  margin-left: auto;
+}
+.link a {
+  display: block;
+  text-decoration: none;
+  font-size: 1.75rem;
+  color: white;
+  font-family: "Raleway";
+}
+.active a{
+  text-decoration: underline double 1px;
+  text-underline-offset: 3px;
+}
+
+.home-container {
+  grid-area: main;
+  background-color: #121212;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+.grid-container {
+  aspect-ratio: 1;
+  display: grid;
+  background-color: black;
+  border-radius: 20px;
+  padding: 1rem;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
+    "blu blu cor cor cor"
+    "blu blu cor cor cor"
+    "blu blu dot green green"
+    "gray gray gray green green"
+    "gray gray gray green green";
+  gap: 0.5rem;
+}
+.home-text {
+  align-content: center;
+  color: white;
+  padding: 2rem;
+  font-size: 2rem;
+}
+.home-text h1{
+  font-family: "Playfair";
+}
+.home-text h2{
+  font-family: "Playfair";
+  font-weight: normal;
+}
+
+
+@media (max-width: 1100px) {
+  .home-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+  }
+  .grid-container {
+    width: 100%;
+    min-height: 0;
+    height: 100%;
+    aspect-ratio: 3 / 4;
+    grid-template-columns: 50fr 25fr 25fr;
+    grid-template-rows: 20fr 20fr 40fr 20fr;
+    padding: 1rem;
+    gap: 1rem;
+    grid-template-areas:
+      "cor cor dot"
+      "blu gray gray"
+      "blu green green"
+      "gal green green";
+  }
+  .teal {
+    display: block !important;
+    background-color: white;
+
+  }
+  img{
+    object-fit: cover !important;
+  }
+.home-text{
+  min-height: 0;
+  text-align: center;
+  padding: 0;
+}
+  
+}
+@media(max-width: 550px){
+  .link-list{
+    flex-direction: column;
+    margin-right: auto;
+  }
+  .link a{
+    font-size: 1.5rem;
+  }
+  .logo img{
+    width: 120px;
+  }
+  .home-text h1{
+    font-size: 3rem;
+  }
+  .home-text h2{
+    font-size: 2rem;
+  }
+  .teal a{font-size: 1.5rem !important;}
+}
+.teal {
+  border: 2px solid white;
+  display: none;
+  grid-area: gal;
+}
+
+.child {
+  overflow: hidden;
+  border-radius: 20px;
+}
+.child:nth-child(1) {
+  grid-area: blu;
+}
+.child:nth-child(2) {
+  grid-area: cor;
+}
+.child:nth-child(3) {
+  grid-area: green;
+}
+.child:nth-child(4) {
+  background-color: lightslategray;
+  grid-area: gray;
+}
+.child:nth-child(5) {
+  grid-area: dot;
+  display: grid;
+  place-items: center;
+}
+.subgrid {
+  display: grid;
+  grid-template-areas: stack;
+}
+.gridimg {
+  grid-area: stack;
+}
+.gridlink {
+  grid-area: stack;
+  z-index: 1;
+  text-decoration: none;
+  color: white;
+  display: none;
+  transition: all 1s ease;
+}
+.subgrid:hover {
+  .gridlink {
+    font-weight: bold;
+    display: block;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .gridimg {
+    transform: scale(1.1);
+    filter: blur(2px) brightness(50%);
+  }
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(70%);
+  transition: all 0.3s ease;
+}
+img:hover {
+  filter: none;
+  transform: scale(1.05);
+}
+
+.capt {
+  font-size: 1.2rem;
+  font-style: italic;
+  text-decoration: underline 1px;
+}
+.grid-gallery{
+  width: 100%;
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-auto-rows: 240px;
+  grid-auto-flow: dense;
+  padding: 10px;
+  gap: 10px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+
+}
+
+.tall{
+  grid-row: span 2;
+  background-color: rgb(152, 245, 214);
+}
+.wide{
+  grid-column: span 2;
+  background-color: rgb(248, 235, 118);
+}
+.square{
+  background-color: rgb(197, 224, 247);
+}
+.bigsquare{
+  grid-row: span 2;
+  grid-column: span 2;
+  background-color: rgb(255, 223, 182);
+}
+.gallery-items{
+  border-radius: 20px;
+  overflow: hidden;
+}
+.gallery-items img{
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  filter: grayscale(0%);
+  object-fit: cover;
+}
+.gallery-heading{
+  text-align: center;
+  font-size: 5rem;
+  padding: 5rem 0;
+  font-family: "Playfair";
+  text-decoration: underline 3px;
+  text-underline-offset: 6px;
+}
