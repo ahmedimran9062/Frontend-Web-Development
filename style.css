@@ -21,12 +21,17 @@ body {
   margin-bottom: 10px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  border-bottom: #353535 1px solid;
+  position: relative;
 }
-
+.logo{
+  overflow: hidden;
+  margin: 10px;
+  padding: 5px;
+}
 .logo-img {
   width: 100px;
   display: block;
-  border-radius: 30px;
 }
 .link-list {
   display: flex;
@@ -45,7 +50,7 @@ body {
   font-family: "Raleway";
 }
 .active a{
-  text-decoration: underline double 1px;
+  text-decoration: underline double 1px wheat;
   text-underline-offset: 3px;
 }
 
@@ -71,6 +76,8 @@ body {
     "gray gray gray green green"
     "gray gray gray green green";
   gap: 0.5rem;
+  border: #353535 1px solid;
+  z-index: 9;
 }
 .home-text {
   align-content: center;
@@ -80,6 +87,8 @@ body {
 }
 .home-text h1{
   font-family: "Playfair";
+  text-decoration: underline 2px wheat;
+  text-underline-offset: 6px;
 }
 .home-text h2{
   font-family: "Playfair";
@@ -88,9 +97,16 @@ body {
 
 
 @media (max-width: 1100px) {
+  .navbar{margin-bottom: 40px;}
+  .home-text{
+    margin-bottom: 40px;
+  }
   .home-container {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr;
+  }
+  .gallery-heading{
+    margin-bottom: 40px;
   }
   .grid-container {
     width: 100%;
@@ -120,7 +136,10 @@ body {
   text-align: center;
   padding: 0;
 }
-  
+.glow-passive2{
+    box-shadow: 0 0 30px rgba(245, 222, 179, 0.502),
+              0 0 15px rgb(245, 222, 179, 0.25) ;
+}
 }
 @media(max-width: 550px){
   .link-list{
@@ -139,10 +158,11 @@ body {
   .home-text h2{
     font-size: 2rem;
   }
-  .teal a{font-size: 1.5rem !important;}
+  .about-heading h1{
+    font-size: 3rem;
+  }
 }
 .teal {
-  border: 2px solid white;
   display: none;
   grid-area: gal;
 }
@@ -212,7 +232,7 @@ img:hover {
 .capt {
   font-size: 1.2rem;
   font-style: italic;
-  text-decoration: underline 1px;
+  text-decoration: underline 1px wheat;
 }
 .grid-gallery{
   width: 100%;
@@ -225,41 +245,230 @@ img:hover {
   gap: 10px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  border-top: #353535 1px solid;
 
 }
 
 .tall{
   grid-row: span 2;
-  background-color: rgb(152, 245, 214);
+  background-color: rgb(32, 32, 36);
 }
 .wide{
   grid-column: span 2;
-  background-color: rgb(248, 235, 118);
+  background-color: rgb(124, 121, 95);
 }
 .square{
-  background-color: rgb(197, 224, 247);
+  background-color: rgb(66, 92, 114);
 }
 .bigsquare{
   grid-row: span 2;
   grid-column: span 2;
-  background-color: rgb(255, 223, 182);
+  background-color: rgb(158, 127, 86);
 }
 .gallery-items{
   border-radius: 20px;
   overflow: hidden;
+  
 }
 .gallery-items img{
   width: 100%;
   height: 100%;
   border-radius: 20px;
   filter: grayscale(0%);
-  object-fit: cover;
+  object-fit: cover;  
 }
 .gallery-heading{
+  color: white;
   text-align: center;
-  font-size: 5rem;
+  font-size: 3rem;
   padding: 5rem 0;
   font-family: "Playfair";
-  text-decoration: underline 3px;
+  text-decoration: underline 2px wheat;
   text-underline-offset: 6px;
+
+}
+.about-container{
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+}
+.text-cont{
+background-color: black;
+border-radius: 20px;
+margin: 0 auto 50px;
+max-width: 420px;
+padding: 20px;
+border: #353535 1px solid;
+}
+.glow{
+  box-shadow: 0 0 10px rgba(245, 222, 179, 0.123) ;
+transition: all ease .3s;
+}
+.glow:hover{
+  transform: scale(1.01);
+  box-shadow: 0 0 30px rgba(245, 222, 179, 0.502),
+              0 0 15px rgb(245, 222, 179, 0.25) ;
+}
+.glow-passive{
+    box-shadow: 0 0 30px rgba(245, 222, 179, 0.502),
+              0 0 15px rgb(245, 222, 179, 0.25) ;
+}
+.about-text{
+  color: white;
+  font-family: "Raleway";
+text-align: center;
+height: 100%;
+max-width: 400px;
+width: 90%;
+margin: 0 auto;
+font-size: 2rem;
+}
+.gear-cont{
+  margin-top: 50px;
+  background-color: black;
+  width: 100%;
+  padding: 20px 35px;
+border-radius: 20px;
+display: grid;
+grid-template-columns: 1fr minmax(0,1fr);
+margin: 0 auto 50px;
+max-width: 720px;
+border: #353535 1px solid;
+
+}
+.gear-cont h2{
+  color: white;
+  font-size: 3.5rem;
+  font-family: "Playfair";
+  font-weight: normal;
+}
+.device-list{
+  color: white;  
+  font-family: "Raleway";
+  list-style:circle ;
+  font-size: 1.5rem;
+  margin-left: 50px;
+}
+li::marker{
+  color: wheat;
+}
+.list-container{
+  grid-column: 1;
+}
+.icon-grid{
+  grid-column: 2;
+  display: grid;
+  height: 250px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  grid-template-areas: "mobile dot"
+  "mobile smart"
+  "log smart";
+  justify-self: end;
+  align-self: center;
+  aspect-ratio: 3 / 4;
+}
+.icon-container img{
+  filter: invert(100%);
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+
+}
+.dot{
+  grid-area: dot;
+}
+.log{
+  grid-area: log;
+}
+.mobile{
+  grid-area: mobile;
+}
+.smart{
+  grid-area: smart;
+}
+@media (max-width:550px){
+  .device-list{
+    font-size: 1.2rem;
+  }
+  .gear-cont{
+    padding-left:20px ;
+    padding-right: 20px;
+  }
+  .gear-cont h2{
+    font-size: 3rem;
+    padding: 4px;
+  }
+  .icon-container img{
+      object-fit: contain !important;
+      padding: 0;
+  }
+    .icon-grid{
+    aspect-ratio: auto;
+  }
+}
+.gear-app-grid{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 720px));
+  justify-content: space-evenly;
+}
+.icon-grid-app{
+  height: 250px;
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  grid-template-areas: "gcam"
+  "psc"
+  "snap";
+  justify-self: end;
+  align-self: center;
+}
+.app-icon-container img{
+  width: 100%;
+  height: 100%;
+  filter: grayscale(0);
+  object-fit: contain !important;
+
+}
+.snap{
+  grid-area: snap;
+  padding: 5px;
+
+}
+.gcam{
+  grid-area: gcam;
+}
+.psc{
+  grid-area: psc;
+  padding: 5px;
+}
+@media (max-width:374px) {
+
+  .icon-grid{
+    display: none;
+  }
+  .icon-grid-app{
+    display: none;
+  }
+}
+
+
+.glow-text{
+  text-shadow: 0 0 10px rgba(245, 222, 179, 0.363) ;
+transition: all ease .3s;
+}
+.glow-text:hover{
+  text-shadow: 0 0 8px rgba(245, 222, 179, 0.8),
+              0 0 20px rgb(245, 222, 179, 0.2) ;
+}
+.glow-text2{
+  text-shadow: 0 0 15px rgba(245, 222, 179, 0.555) ;
+transition: all ease .2s;
+}
+.glow-text2:hover{
+  text-shadow: 0 0 15px rgba(245, 222, 179, 0.8),
+              0 0 24px rgba(245, 222, 179, 0.384) ;
+  transform: translatey(-3px)
 }
