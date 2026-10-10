@@ -93,6 +93,8 @@ body {
 .home-text h2{
   font-family: "Playfair";
   font-weight: normal;
+  cursor:context-menu;
+
 }
 
 
@@ -125,8 +127,6 @@ body {
   }
   .teal {
     display: block !important;
-    background-color: white;
-
   }
   img{
     object-fit: cover !important;
@@ -190,20 +190,17 @@ body {
   place-items: center;
 }
 .subgrid {
-  display: grid;
-  grid-template-areas: stack;
-}
-.gridimg {
-  grid-area: stack;
+  position: relative;
+  transition: all 1s ease;
 }
 .gridlink {
-  grid-area: stack;
-  z-index: 1;
+  position: absolute;
   text-decoration: none;
   color: white;
   display: none;
   transition: all 1s ease;
 }
+
 .subgrid:hover {
   .gridlink {
     font-weight: bold;
@@ -211,8 +208,8 @@ body {
     font-size: 1.5rem;
     text-align: center;
   }
-  .gridimg {
-    transform: scale(1.1);
+  .gridimg{
+    transform: scale(1.05);
     filter: blur(2px) brightness(50%);
   }
 }
@@ -276,6 +273,7 @@ img:hover {
   border-radius: 20px;
   filter: grayscale(0%);
   object-fit: cover;  
+
 }
 .gallery-heading{
   color: white;
@@ -322,6 +320,8 @@ max-width: 400px;
 width: 90%;
 margin: 0 auto;
 font-size: 2rem;
+cursor:context-menu;
+
 }
 .gear-cont{
   margin-top: 50px;
@@ -354,6 +354,8 @@ li::marker{
 }
 .list-container{
   grid-column: 1;
+  cursor:context-menu;
+
 }
 .icon-grid{
   grid-column: 2;
@@ -454,10 +456,10 @@ li::marker{
   }
 }
 
-
 .glow-text{
   text-shadow: 0 0 10px rgba(245, 222, 179, 0.363) ;
 transition: all ease .3s;
+cursor:context-menu;
 }
 .glow-text:hover{
   text-shadow: 0 0 8px rgba(245, 222, 179, 0.8),
